@@ -1,0 +1,86 @@
+# Project exclude paths
+/.gradle/
+/Desktop Connect Four/task/build/
+/Desktop Connect Four/task/out/
+/Desktop Connect Four/task/out/production/classes/
+/Desktop Connect Four/task/out/test/classes/
+/Topics/Instance methods/Car/out/
+/Topics/Instance methods/Car/out/production/classes/
+/Topics/Instance methods/Circle/out/
+/Topics/Instance methods/Circle/out/production/classes/
+/Topics/Instance methods/Counter/out/
+/Topics/Instance methods/Counter/out/production/classes/
+/Topics/Instance methods/Declare me/out/
+/Topics/Instance methods/Declare me/out/production/classes/
+/Topics/Instance methods/Instance method and its class/out/
+/Topics/Instance methods/Instance method and its class/out/production/classes/
+/Topics/Instance methods/Invoke instance method/out/
+/Topics/Instance methods/Invoke instance method/out/production/classes/
+/Topics/Instance methods/Theory/out/
+/Topics/Instance methods/Theory/out/production/classes/
+/Topics/Lambda expressions/Apply function to all elements/out/
+/Topics/Lambda expressions/Apply function to all elements/out/production/classes/
+/Topics/Lambda expressions/Creating a closure/out/
+/Topics/Lambda expressions/Creating a closure/out/production/classes/
+/Topics/Lambda expressions/Expression closure/out/
+/Topics/Lambda expressions/Expression closure/out/production/classes/
+/Topics/Lambda expressions/Higher-order functions/out/
+/Topics/Lambda expressions/Higher-order functions/out/production/classes/
+/Topics/Lambda expressions/Max of two integers/out/
+/Topics/Lambda expressions/Max of two integers/out/production/classes/
+/Topics/Lambda expressions/Next even number/out/
+/Topics/Lambda expressions/Next even number/out/production/classes/
+/Topics/Lambda expressions/Parts of code/out/
+/Topics/Lambda expressions/Parts of code/out/production/classes/
+/Topics/Lambda expressions/Production of all numbers in the range/out/
+/Topics/Lambda expressions/Production of all numbers in the range/out/production/classes/
+/Topics/Lambda expressions/Statements/out/
+/Topics/Lambda expressions/Statements/out/production/classes/
+/Topics/Lambda expressions/Theory/out/
+/Topics/Lambda expressions/Theory/out/production/classes/
+/Topics/Objects/Accessing fields/out/
+/Topics/Objects/Accessing fields/out/production/classes/
+/Topics/Objects/Army/out/
+/Topics/Objects/Army/out/production/classes/
+/Topics/Objects/Circles and Objects  A Java Tale/out/
+/Topics/Objects/Circles and Objects  A Java Tale/out/production/classes/
+/Topics/Objects/Immutability/out/
+/Topics/Objects/Immutability/out/production/classes/
+/Topics/Objects/Null or not/out/
+/Topics/Objects/Null or not/out/production/classes/
+/Topics/Objects/Theory/out/
+/Topics/Objects/Theory/out/production/classes/
+/Topics/Objects/What is my age/out/
+/Topics/Objects/What is my age/out/production/classes/
+/Topics/Objects/What is the value of a field/out/
+/Topics/Objects/What is the value of a field/out/production/classes/
+/Topics/Template method/A disadvantage/out/
+/Topics/Template method/A disadvantage/out/production/classes/
+/Topics/Template method/Build a house/out/
+/Topics/Template method/Build a house/out/production/classes/
+/Topics/Template method/Career/out/
+/Topics/Template method/Career/out/production/classes/
+/Topics/Template method/Determine the output/out/
+/Topics/Template method/Determine the output/out/production/classes/
+/Topics/Template method/Social networks/out/
+/Topics/Template method/Social networks/out/production/classes/
+/Topics/Template method/Template Method/out/
+/Topics/Template method/Template Method/out/production/classes/
+/Topics/Template method/Theory/out/
+/Topics/Template method/Theory/out/production/classes/
+/Topics/Template method/What does it do/out/
+/Topics/Template method/What does it do/out/production/classes/
+/Topics/Window listeners/Add a window/out/
+/Topics/Window listeners/Add a window/out/production/classes/
+/Topics/Window listeners/Closing the window/out/
+/Topics/Window listeners/Closing the window/out/production/classes/
+/Topics/Window listeners/Count a window active time/out/
+/Topics/Window listeners/Count a window active time/out/production/classes/
+/Topics/Window listeners/Implement a listener/out/
+/Topics/Window listeners/Implement a listener/out/production/classes/
+/Topics/Window listeners/Listener triggered/out/
+/Topics/Window listeners/Listener triggered/out/production/classes/
+/Topics/Window listeners/Theory/out/
+/Topics/Window listeners/Theory/out/production/classes/
+/Topics/Window listeners/WindowListener Interface requirements/out/
+/Topics/Window listeners/WindowListener Interface requirements/out/production/classes/
