@@ -2,12 +2,14 @@ package four;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class ConnectFour extends JFrame {
     TurnCounter turnCounter = new TurnCounter();
     private final int rows = 6;
     private final int columns = 7;
     private final JButton[][] buttons = new JButton[rows][columns];
+    private final ArrayList<JButton> correctGridButtons = new ArrayList<>();
 
     public ConnectFour() {
         //set frame
@@ -23,9 +25,9 @@ public class ConnectFour extends JFrame {
         add(grid);
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                char buttonChar = (char) (65 + j);
+                char buttonChar = (char) ('A' + j);
                 int buttonNumber = 6 - i;
-                String buttonName = "Button" + String.valueOf(buttonChar) + String.valueOf(buttonNumber);
+                String buttonName = "Button" + buttonChar + buttonNumber;
                 buttons[i][j] = new JButton(" ");
                 var b = buttons[i][j];
                 b.setSize(100, 100);
@@ -54,10 +56,16 @@ public class ConnectFour extends JFrame {
         for (int j = 5; j >= 0; j--) {
             if (buttons[j][column].getText().equals(" ")) {
                 buttons[j][column].setText(stringToSet);
-                checkAndApplyVictoryConditionVertical();
-                checkAndApplyVictoryConditionHorizontal();
-                checkAndApplyVictoryConditionDiagonalBackSlash();
-                checkAndApplyVictoryConditionDiagonalForwardSlash();
+                if (checkVertical() || checkHorizontal() || checkBackDiagonal() || checkForwardDiagonal()) {
+                    for (JButton c : correctGridButtons) {
+                        c.setBackground(Color.green);
+                    }
+                    for (int k = 0; k < rows; k++) {
+                        for (int l = 0; l < columns; l++) {
+                            buttons[k][l].setEnabled(false);
+                        }
+                    }
+                }
                 turnCounter.incrementTurnCounter();
                 break;
             }
@@ -74,10 +82,11 @@ public class ConnectFour extends JFrame {
                 c.setEnabled(true);
             }
         }
+        correctGridButtons.clear();
         turnCounter.resetTurnCounter();
     }
 
-    private void checkAndApplyVictoryConditionVertical() {
+    private boolean checkVertical() {
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows - 3; j++) {
                 String stringCheck = buttons[j][i].getText();
@@ -88,20 +97,17 @@ public class ConnectFour extends JFrame {
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
-                            buttons[j + k][i].setBackground(Color.green);
+                            correctGridButtons.add(buttons[j + k][i]);
                         }
-                        for (int k = 0; k < rows; k++) {
-                            for (int l = 0; l < columns; l++) {
-                                buttons[k][l].setEnabled(false);
-                            }
-                        }
+                        return true;
                     }
                 }
             }
         }
+        return false;
     }
 
-    private void checkAndApplyVictoryConditionHorizontal() {
+    private boolean checkHorizontal() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns - 3; j++) {
                 String stringCheck = buttons[i][j].getText();
@@ -112,20 +118,17 @@ public class ConnectFour extends JFrame {
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
-                            buttons[i][j + k].setBackground(Color.green);
+                            correctGridButtons.add(buttons[i][j + k]);
                         }
-                        for (int k = 0; k < rows; k++) {
-                            for (int l = 0; l < columns; l++) {
-                                buttons[k][l].setEnabled(false);
-                            }
-                        }
+                        return true;
                     }
                 }
             }
         }
+        return false;
     }
 
-    private void checkAndApplyVictoryConditionDiagonalBackSlash() {
+    private boolean checkBackDiagonal() {
         for (int i = 0; i < columns - 3; i++) {
             for (int j = 0; j < rows - 3; j++) {
                 String stringCheck = buttons[j][i].getText();
@@ -136,20 +139,17 @@ public class ConnectFour extends JFrame {
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
-                            buttons[j + k][i + k].setBackground(Color.green);
+                            correctGridButtons.add(buttons[j + k][i + k]);
                         }
-                        for (int k = 0; k < rows; k++) {
-                            for (int l = 0; l < columns; l++) {
-                                buttons[k][l].setEnabled(false);
-                            }
-                        }
+                        return true;
                     }
                 }
             }
         }
+        return false;
     }
 
-    private void checkAndApplyVictoryConditionDiagonalForwardSlash() {
+    private boolean checkForwardDiagonal() {
         for (int i = 4; i < columns; i++) {
             for (int j = 0; j < rows - 3; j++) {
                 String stringCheck = buttons[j][i].getText();
@@ -160,16 +160,13 @@ public class ConnectFour extends JFrame {
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
-                            buttons[j + k][i - k].setBackground(Color.green);
+                            correctGridButtons.add(buttons[j + k][i - k]);
                         }
-                        for (int k = 0; k < rows; k++) {
-                            for (int l = 0; l < columns; l++) {
-                                buttons[k][l].setEnabled(false);
-                            }
-                        }
+                        return true;
                     }
                 }
             }
         }
+        return false;
     }
 }
