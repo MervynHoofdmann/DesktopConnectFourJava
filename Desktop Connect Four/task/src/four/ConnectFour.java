@@ -49,7 +49,7 @@ public class ConnectFour extends JFrame {
     private void gridButton(JButton b) {
         int currentTurn = turnCounter.getTurnCounter();
         String buttonName = b.getName();
-        int column = (buttonName.charAt(6) - 65);
+        int column = (buttonName.charAt(6) - 'A');
         String stringToSet;
         if (currentTurn % 2 == 0) stringToSet = "X";
         else stringToSet = "O";
