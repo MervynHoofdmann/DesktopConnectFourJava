@@ -32,6 +32,7 @@ public class ConnectFour extends JFrame {
                 var b = buttons[i][j];
                 b.setSize(100, 100);
                 b.setName(buttonName);
+                b.setFocusPainted(false);
                 b.addActionListener(e -> gridButton(b));
                 grid.add(b);
             }
@@ -42,6 +43,7 @@ public class ConnectFour extends JFrame {
         add(taskbar);
         JButton resetButton = new JButton("Reset");
         resetButton.setName("ButtonReset");
+        resetButton.setFocusPainted(false);
         resetButton.addActionListener(e -> resetButton());
         taskbar.add(resetButton);
     }
