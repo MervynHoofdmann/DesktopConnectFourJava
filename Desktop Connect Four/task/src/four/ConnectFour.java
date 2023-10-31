@@ -152,7 +152,7 @@ public class ConnectFour extends JFrame {
     }
 
     private boolean checkForwardDiagonal() {
-        for (int i = 4; i < columns; i++) {
+        for (int i = 3; i < columns; i++) {
             for (int j = 0; j < rows - 3; j++) {
                 String stringToCheck = buttons[j][i].getText();
                 if (!stringToCheck.equals(" ")) {
