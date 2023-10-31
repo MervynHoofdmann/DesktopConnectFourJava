@@ -91,11 +91,11 @@ public class ConnectFour extends JFrame {
     private boolean checkVertical() {
         for (int i = 0; i < columns; i++) {
             for (int j = 0; j < rows - 3; j++) {
-                String stringCheck = buttons[j][i].getText();
-                if (!stringCheck.equals(" ")) {
+                String stringToCheck = buttons[j][i].getText();
+                if (!stringToCheck.equals(" ")) {
                     int correctSquares = 1;
                     for (int k = 1; k <= 3; k++) {
-                        if (buttons[j + k][i].getText().equals(stringCheck)) correctSquares++;
+                        if (buttons[j + k][i].getText().equals(stringToCheck)) correctSquares++;
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
@@ -112,11 +112,11 @@ public class ConnectFour extends JFrame {
     private boolean checkHorizontal() {
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns - 3; j++) {
-                String stringCheck = buttons[i][j].getText();
-                if (!stringCheck.equals(" ")) {
+                String stringToCheck = buttons[i][j].getText();
+                if (!stringToCheck.equals(" ")) {
                     int correctSquares = 1;
                     for (int k = 1; k <= 3; k++) {
-                        if (buttons[i][j + k].getText().equals(stringCheck)) correctSquares++;
+                        if (buttons[i][j + k].getText().equals(stringToCheck)) correctSquares++;
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
@@ -133,11 +133,11 @@ public class ConnectFour extends JFrame {
     private boolean checkBackDiagonal() {
         for (int i = 0; i < columns - 3; i++) {
             for (int j = 0; j < rows - 3; j++) {
-                String stringCheck = buttons[j][i].getText();
-                if (!stringCheck.equals(" ")) {
+                String stringToCheck = buttons[j][i].getText();
+                if (!stringToCheck.equals(" ")) {
                     int correctSquares = 1;
                     for (int k = 1; k <= 3; k++) {
-                        if (buttons[j + k][i + k].getText().equals(stringCheck)) correctSquares++;
+                        if (buttons[j + k][i + k].getText().equals(stringToCheck)) correctSquares++;
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
@@ -154,11 +154,11 @@ public class ConnectFour extends JFrame {
     private boolean checkForwardDiagonal() {
         for (int i = 4; i < columns; i++) {
             for (int j = 0; j < rows - 3; j++) {
-                String stringCheck = buttons[j][i].getText();
-                if (!stringCheck.equals(" ")) {
+                String stringToCheck = buttons[j][i].getText();
+                if (!stringToCheck.equals(" ")) {
                     int correctSquares = 1;
                     for (int k = 1; k <= 3; k++) {
-                        if (buttons[j + k][i - k].getText().equals(stringCheck)) correctSquares++;
+                        if (buttons[j + k][i - k].getText().equals(stringToCheck)) correctSquares++;
                     }
                     if (correctSquares == 4) {
                         for (int k = 0; k <= 3; k++) {
